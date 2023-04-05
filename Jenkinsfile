@@ -78,6 +78,7 @@ pipeline {
                 }
             }
         }
+    }
         post {
         always {
             withEnv(["FRONTEND_IMAGE=$frontendImage:$frontendDockerTag", 
@@ -86,5 +87,4 @@ pipeline {
             cleanWs()
             }
         }
-    }
 }
